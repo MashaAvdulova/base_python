@@ -111,7 +111,7 @@ if age < 20:
 
 print("next block")
 
-if (age < 11 and age !=0):
+if age < 11 and age !=0:
     print("error")
 elif age == 0:
     print("age == 0")
