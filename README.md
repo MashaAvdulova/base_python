@@ -10,7 +10,7 @@
 ### git commit -m "comment for commit"
 
 ## Отправить изменения на удаленный репозиторий (github.com)
-### git push
+### git pull
 
 ## Скачать изменения из удаленного репозитория
 ### git pull
