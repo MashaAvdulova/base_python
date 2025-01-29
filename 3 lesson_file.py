@@ -18,7 +18,7 @@ new_file = open('new_file.txt', 'w',  encoding = 'utf-8')
 text = 'I love python'
 new_file.write(text)
 new_file.write(text+'\n')
-new_file.write('\nPython fprever\n')
+new_file.write('\nPython forever\n')
 
 
 # списки и словари:
