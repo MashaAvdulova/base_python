@@ -122,27 +122,48 @@ print(f'5. Всего слов в тексте -  {len(word_poem)}')
 
 # 6*. Сколько слов в каждой строке
 print(f'6. Анализ слов по строкам:')
-for i in num_str:
-    symbol_str_poem = i.split()
+for i in range(len(num_str)):
+    symbol_str_poem = num_str[i].split()
     word_str_poem = []
     for j in symbol_str_poem:
         word = j.strip(',.?!;:-')
         word_str_poem.append(word)
-    print(f'{num_str.index(i)+1} строка -  {len(word_str_poem)} слов/слова')
+    print(f'{i+1} строка -  {len(word_str_poem)} слов/слова')
 
 # 7*. Сколько символов в каждой строке
 print(f'7. Анализ символов по строкам:')
-for i in num_str:
-    print(f'{num_str.index(i)+1} строка -  {len(i)} символов/символ')
+for i in range(len(num_str)):
+    print(f'{i+1} строка -  {len(num_str[i])} символов/символ')
 
 # 8. Найти повторяющиеся слова в тексте с указанием количества
-print(f'8. Повторяющиеся слова:')
-
+print(f'8. Повторяющиеся слова: ')
+text_poem_lower = text_poem.lower()
+text_poem_sp = text_poem_lower.split()
+text_poem_clean =[]
+for i in text_poem_sp:
+    word = i.strip(',.?!;:-')
+    text_poem_clean.append(word)
+text_poem_set = set(text_poem_clean)
+for i in text_poem_set:
+    num = text_poem_clean.count(i)
+    if num > 1:
+        print(f'{i} - {num}')
 
 # 9*. Провести частотный анализ букв (частота появления каждой буквы в тексте)
-print(f'9. Частотный анализ текста:')
-
-
 # 10. Найти все посторонние символы (пробелы и знаки препинания) - какие и сколько
-print(f'10. Прочие символы:')
 
+letters = list(text_poem_lower)
+letters_uniq = list(set(letters))
+letters_uniq.sort()
+print(f'9. Частотный анализ текста:')
+for i in letters_uniq:
+    num = letters.count(i)
+    if i.isalpha():
+       print(f'{i} - {num}')
+print(f'10. Прочие символы:')
+for i in letters_uniq:
+    num = letters.count(i)
+    if i.isalpha():
+        break
+    else:
+        print(f'{i} - {num}')
