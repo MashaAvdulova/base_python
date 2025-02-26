@@ -9,7 +9,15 @@ delta = new_year_first_day - today
 print(delta)
 
 # 2. Написать функцию, которая принимает дату рождения и возвращает количество полных лет
-
+birthday = input('Введите дату рождения: ')
+birthday_dt = datetime.strptime(birthday, '%d.%m.%Y')
+today_year = today.year
+birthday_dt_year = birthday_dt.year
+age = today - birthday_dt
+print(today_year)
+print(birthday_dt_year)
+print(age.days)
+print(age)
 
 # 3. Написать функцию check_date(), которая принимает дату в формате строки "дд.мм.гггг"
 # и возвращает количество дней, которые прошли с этой даты или сколько дней осталось)
