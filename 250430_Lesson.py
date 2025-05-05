@@ -8,7 +8,7 @@
 # 3. Комментируйте строки, которые считаете необходимым пояснить
 # 4. Старайтесь не использовать встроенные функции для нахождения минимального и максимального элементов списка
 
-
+import random
 
 def num(lists):
     min_num = lists[0]
@@ -17,10 +17,10 @@ def num(lists):
         if i > min_num:
             max_num = i
         else: min_num = i
-    return (min_num,max_num)
+    return (min_num, max_num)
 
 list_1 = [1,2,5,10,0]
-
+# a = random()
 print(num(list_1))
 
 
